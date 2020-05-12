@@ -1,0 +1,159 @@
+<html>
+<title> Day 2 </title>
+<head>
+
+</head>
+
+<body>
+	
+	<h3> MAX NUMBER</h3>
+	<p id ="demo"></p>
+	<hr/> 
+	
+	<h3>DISPLAY NAME</h3>
+	<button id="myBtn" name="CHETNA BINEKAR" onclick="mybutton()">Click Me!!!!!</button>
+	<p id ="demo1"></p>
+	<hr/>
+	
+	<h3>DISPLAY HIDDEN NAME</h3>
+	<button onclick="myHidden()">Unhide</button>
+	<p id="demo2"></p>
+	<hr/>
+	
+	<h3>INCREASE FONT SIZE</h3>
+	<button id="jsstyle"onclick="increaseFontSize()">INCREASE FONT SIZE</button>
+	<p id="text" style="font-size:4pt;">CHETNA BINEKAR</p>
+	<hr/>
+	
+	<h3>DISPLAY DATE</h3>
+	<button onclick="mydate()">click me!!</button>
+	<p id="demo3"></p>
+	<hr/>
+	
+	<h3>COPY TEXT</h3>
+	<textarea id="source"></textarea>
+	<textarea id="target"></textarea>
+	<br/>
+	<button type="button" onclick="update();">COPY</button>
+	<hr/>
+	
+	<h3>ARRANGE IN ASCENDING ORDER</h3>
+	<button onclick="myascending()">Arrange in ascending order</button>
+	<p id="demo4"></p>
+	<hr/>
+	
+	<h3>ARRANGE IN DESCENDING ORDER</h3>
+	<button onclick="mydescending()">Arrange in descending order</button>
+	<p id="demo5"></p>
+	<hr/>
+	
+	
+	<h3>GENERATE RANDOM NUMBERS</h3>
+	<button onclick="myrandom()">click me!!</button>
+    <p id="demo7"></p>
+	<hr/>
+	
+	<h3>VALIDATE MOBILE NUMBER</h3>
+	<button type="button" onclick="check(mobile)"> click to check</button>
+	<hr/>
+	
+	<h3>VALIDATE EMAIL ID</h3>
+	
+	<script>
+            
+                var x= [1,2,13,4,15,6,17,8,9,10]
+                document.getElementById('demo').innerHTML=Array_Max(x);
+
+                function Array_Max(arr) 
+                {
+                  return Math.max.apply(null, arr);
+                }
+		
+		
+		
+				function mybutton() {
+					var btn = document.getElementById("myBtn").name;
+					document.getElementById("demo1").innerHTML = btn;
+				}
+				
+				
+
+				var name = "CHETNA BINEKAR";
+				function myHidden() {
+				  
+				  document.getElementById("demo2").innerHTML = name;
+				}
+				
+				
+				function increaseFontSize() {
+				text.style.fontSize = "14pt";
+				}
+				
+				
+				var d = new Date();
+
+				function mydate() {
+				  
+				  document.getElementById("demo3").innerHTML = d;
+				}
+				
+				
+				function update() {
+				document.getElementById('target').value = document.getElementById('source').value;
+				}
+				
+				
+				var asc = [40, 100, 10, 50, 25, 150];
+				document.getElementById("demo4").innerHTML = asc;  
+
+				function myascending() {
+				asc.sort(function(a, b){return a - b});
+				document.getElementById("demo4").innerHTML = asc;
+				}
+				
+				
+				var fruits = ["Banana", "Orange", "Apple", "Mango", "Strawberry"];
+				document.getElementById("demo5").innerHTML = fruits;
+
+				function mydescending() {
+				
+				fruits.sort();
+				
+				  fruits.reverse();
+				  document.getElementById("demo5").innerHTML = fruits;
+				}
+	
+	
+				var a="divyeshkambli@yahoo.com"
+				var b=a.match("@");
+				if (b==-1) 
+				{
+				document.write("Invalid Email Id");
+				}
+				else
+				{ 
+				document.write("Valid Email Id");
+				}
+				
+				function myrandom()
+				{
+					document.getElementById("demo7").innerHTML = Math.random();
+
+				}
+				
+				var mobile="1111111111";
+				function check (mobile)
+				{
+					if(mobile.length==10)
+					{
+						alert("Valid Mobile number");
+					}
+					else{
+						alert("Invalid Mobile number");
+					}
+					
+				}
+        
+	</script>
+</body>
+</html>
