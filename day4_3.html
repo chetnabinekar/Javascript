@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>SQUARE AND CUBE OF A NUMBER</h2>
+
+<h3>SQUARE :</h3>
+<p id="demo"></p>
+<h3>CUBE :</h3>
+<p id ="demo1"></p>
+
+<script>
+	class math{
+		constructor(number){
+			this.no = number;
+		}
+		
+		static square(x){
+			return x.no * x.no;
+		}
+		
+		static cube(x){
+			return x.no * x.no * x.no;
+		}
+		
+	}	
+	
+	mymath = new math("5");
+	document.getElementById("demo").innerHTML = math.square(mymath);
+	
+	document.getElementById("demo1").innerHTML = math.cube(mymath);
+</script>
+
+</body>
+</html>
+

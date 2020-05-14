@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>DISPLAYING NAME AND BALANCE</h2>
+<p id="demo"></p>
+
+<script>
+	class account
+	{
+		constructor(n,b)
+		{
+			this.name = n;
+			this.balance = b;
+		}
+		
+		deposit(amount)
+		{
+			this.balance+=amount;
+		}
+		
+		display()
+		{
+			var str = "Name :" + this.name + "<br/> Balance :" + this.balance + "<br/><br/>";
+			document.write(str);
+		}
+	}
+	
+	user1 = new account("Chetna" , 20000);
+	user2 = new account("Krunal" , 30000);
+	user1.deposit(9000);
+	user2.deposit(10000);
+	user1.display();
+	user2.display();
+</script>
+</body>
+</html>
+
