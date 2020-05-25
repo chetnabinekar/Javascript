@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+class student{
+    constructor(rn,n,m1,m2,m3)
+    {
+        this.rollno=rn
+        this.name=n
+        this.marks1=m1
+        this.marks2=m2
+        this.marks3=m3
+        this.total=function()
+        {
+            return this.marks1+this.marks2+this.marks3
+        }
+        this.percentage=function()
+        {
+            return this.total()*100/300
+        }
+    }
+
+}
+var a=new student(1,"CHETNA",66,85,87)
+var b=new student(2,"KRUNAL",72,65,81)
+document.getElementById("demo").innerHTML=a.rollno+"<br/><br/> "+a.name+"<br/><br/> "+a.marks1+"<br/><br/> "+a.marks2+"<br/><br/> "+a.marks3+"<br/><br/> "+a.total()+"<br/><br/> "+a.percentage()
+document.getElementById("demo1").innerHTML=b.rollno+"<br/><br/> "+b.name+"<br/><br/> "+b.marks1+"<br/><br/> "+b.marks2+"<br/><br/> "+b.marks3+"<br/><br/> "+b.total()+"<br/><br/> "+b.percentage()
+</script>
+
+</body>
+</html>
