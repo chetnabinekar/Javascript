@@ -1,0 +1,22 @@
+<html>
+<body>
+	<H1>SELF INVOKING FUNCTION AND PRINTING SUM</H1>
+
+	<script>
+		function sum(){
+			let add = 0;
+			let size = arguments.length;
+			for(let i=0 ; i<size ; i++)
+			{
+				add += arguments[i];
+			}
+			return add;
+		}
+		var x = sum(2,4);
+		document.write("<br/>SUM IS "+x);
+		
+		var y = sum(2,3,5);
+		document.write("<br/>SUM IS "+y);
+	</script>
+</body>
+</html>
