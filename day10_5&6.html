@@ -1,0 +1,57 @@
+<html>
+<body>
+<p>5.</p>
+	<p id="myP">Chetna Binekar</p>
+	<select onchange="myFunction(this);" size="10">
+		 <option value="1" >1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+	</select>
+	<hr/>
+<p>6</p>
+	Number 1 :<input type="number" id="1">
+	Number 2 :<input type="number" id="2"><br/><br/>
+	Output :<input type="text" id="3"><br><br/>
+	<button type="button" id="4" onclick="add()">Add</button>
+	<button type="button" id="5" onclick="subtract()">Sub</button>
+	<hr/>
+	
+<script>
+
+//5
+function myFunction(id){
+               var size = id.value;
+               document.getElementById("myP").style.fontSize = size+"px";
+               
+}
+	
+//6	
+function add()
+{
+    var a=parseInt(document.getElementById("1").value)
+	var b=parseInt(document.getElementById("2").value)
+	var d=document.getElementById("3")
+	var c=a+b
+	
+	d.value=c
+}
+function subtract()
+{
+    var a=document.getElementById("1").value
+	var b=document.getElementById("2").value
+	var c=a-b
+	var d=document.getElementById("3")
+
+	d.value=c
+}
+
+</script>
+</body>
+</html>

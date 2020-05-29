@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html> 
+<body>
+  <p id="1">I am Chetna Binekar</p>
+  <p id="2">I love Sketching</p>
+  <p id="3">I play games</p>
+  <hr/>
+  
+	<ol id="3rd">
+        <li id="1st">Mayuri</li>
+        <li id="2nd">Desai</li>       
+	</ol>
+     <button type="button" onclick="remove()">Remove</button>
+	 <hr/>
+	 
+	
+<script>
+//7
+var a= document.getElementsByTagName("p")
+for(let i=0;i<a.length;i++)
+{
+    a[i].style.background="blue"
+}
+var b=a.length
+document.write(b)
+
+
+//8
+function remove(){
+var a=document.getElementById("3rd")
+var b=document.getElementById("1st")
+a.removeChild(b)
+    }
+	
+</script>
+
+
+</body>
+</html>
