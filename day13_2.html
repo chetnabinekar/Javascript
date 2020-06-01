@@ -1,0 +1,24 @@
+<html>
+<head>
+	<style>
+		body{
+			background-color:bisque;
+		}
+		h2{
+			text-align:center;
+		}
+	</style>
+</head>
+<body onload="pixel()">
+	<h2 id="size"></h2>
+	
+	<script>
+		function pixel(){
+			var w = screen.width;
+			var h = screen.height;
+			document.getElementById("size").innerHTML = "Width :"+ w +" "+ "Height :"+ h;
+			}
+	</script>
+
+</body>
+</html>

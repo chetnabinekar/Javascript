@@ -1,0 +1,39 @@
+<html>
+<head>
+	<style>
+		body{
+			background-color:bisque;
+		}
+		h2{
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<input id="text1">
+    <button onclick="createcookie()">Create Cookie</button>
+    <button onclick="readcookie()">Read Cookie</button>
+        <script>
+			function createcookie(){
+				var t = document.getElementById("text1").value.toString();
+				if(t.length==0){
+					alert("Please Enter the data");
+				}
+				else{
+					document.cookie = t;
+					alert("Cookie Created Successfully");
+				}
+			}
+			
+			function readcookie(){
+				var c = document.cookie.toString();
+				if(c.length==0){
+					alert("Cookie is Empty!!!");
+				}
+				else{
+					document.write("Cookie data :"+ c);
+				}
+			}
+		</script>
+</body>
+</html>
